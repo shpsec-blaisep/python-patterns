@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""http://www.testingperspective.com/wiki/doku.php/collaboration/chetan/designpatternsinpython/chain-of-responsibilitypattern"""
 """http://www.dabeaz.com/coroutines/"""
 
 import time
@@ -58,7 +57,7 @@ class Client:
 def coroutine(func):
     def start(*args, **kwargs):
         cr = func(*args, **kwargs)
-        cr.next()
+        next(cr)
         return cr
     return start
 
